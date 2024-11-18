@@ -1,0 +1,33 @@
+﻿@model List<Alumno>
+
+@{
+    var i = 0;
+}
+<h1>Notas Registradas</h1>
+
+<table class="table table-striped table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>#</th>
+            <th>Alumno</th>
+            <th>1er Parcial</th>
+            <th>2do Parcial</th>
+            <th>3er Parcial</th>
+            <th>Promedio</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            i = i + 1;
+            <tr>
+                <td>@i</td>
+                <td>@item.Nombre</td>
+                <td>@item.Nota1</td>
+                <td>@item.Nota2</td>
+                <td>@item.Nota3</td>
+                <td>@item.Promedio</td>
+            </tr>
+        }
+    </tbody>
+</table>
